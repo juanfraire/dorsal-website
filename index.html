@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DORSAL-IoT | Downlink Optimization for Robust Direct-to-Satellite IoT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 43, 92, 0.8), rgba(0, 43, 92, 0.8)), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2110&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-icon {
+            font-size: 2.5rem;
+            color: #ff6600;
+            margin-bottom: 1rem;
+        }
+        .partner-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#002b5c] text-white shadow-lg z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold">DORSAL-IoT</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-orange-500 transition">About</a>
+                    <a href="#partners" class="hover:text-orange-500 transition">Partners</a>
+                    <a href="#scope" class="hover:text-orange-500 transition">Scope</a>
+                    <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div class="md:hidden hidden py-2" id="mobile-menu">
+                <a href="#about" class="block py-2 hover:text-orange-500 transition">About</a>
+                <a href="#partners" class="block py-2 hover:text-orange-500 transition">Partners</a>
+                <a href="#scope" class="block py-2 hover:text-orange-500 transition">Scope</a>
+                <a href="#contact" class="block py-2 hover:text-orange-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
+        <div class="container mx-auto px-6 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">DORSAL-IoT</h1>
+            <h2 class="text-xl md:text-3xl font-semibold mb-8">Downlink Optimization for Robust Direct-to-Satellite IoT</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-12">
+                An international collaboration pioneering efficient downlink communication protocols for Direct-to-Satellite LoRaWAN IoT systems.
+            </p>
+            <a href="#about" class="bg-[#ff6600] hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="section-icon">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#002b5c] mb-4">About the Project</h2>
+                <div class="w-24 h-1 bg-[#ff6600] mx-auto mb-8"></div>
+            </div>
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg mb-8">
+                    DORSAL-IoT brings together experts from France, Chile, and Brazil to develop robust downlink protocols for LoRaWAN-based Direct-to-Satellite IoT communications. The project addresses key challenges in gateway selection, packet scheduling, and optimization for resource-constrained satellite networks.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#ff6600]">
+                        <i class="fas fa-network-wired text-3xl text-[#002b5c] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Non-Terrestrial Networks (NTN)</h3>
+                        <p>Exploring communication solutions beyond traditional terrestrial infrastructure.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#ff6600]">
+                        <i class="fas fa-wifi text-3xl text-[#002b5c] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">LPWAN & LEO Satellites</h3>
+                        <p>Optimizing Low-Power Wide-Area Networks for Low Earth Orbit satellite connectivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="section-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#002b5c] mb-4">Partners and Institutions</h2>
+                <div class="w-24 h-1 bg-[#ff6600] mx-auto mb-8"></div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold text-[#002b5c] mb-6 text-center">DORSAL-IoT (EA)</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="partner-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Inria (France)</h4>
+                            <p class="text-gray-600 mb-2">Oana Iova, Juan Fraire, et al.</p>
+                        </div>
+                        <div class="partner-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Universidad de Chile (UCH)</h4>
+                            <p class="text-gray-600 mb-2">Cesar Azurdia</p>
+                        </div>
+                        <div class="partner-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Pontificia Universidad Católica de Chile (PUC)</h4>
+                            <p class="text-gray-600 mb-2">Miguel Gutiérrez</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold text-[#002b5c] mb-6 text-center">DORSAL-IoT (SticAmSud)</h3>
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="partner-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Universidad de Chile (UCH)</h4>
+                            <p class="text-gray-600 mb-2">Cesar Azurdia</p>
+                        </div>
+                        <div class="partner-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Universidad Diego Portales (UDP)</h4>
+                            <p class="text-gray-600 mb-2">Diego Dujovne</p>
+                        </div>
+                        <div class="partner-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Universidad Tecnológica Metropolitana (UTEM)</h4>
+                            <p class="text-gray-600 mb-2">Samuel Montejo Sánchez</p>
+                        </div>
+                        <div class="partner-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg mb-2">Universidade Federal de Santa Catarina (UFSC)</h4>
+                            <p class="text-gray-600 mb-2">Richard Demo Souza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope Section -->
+    <section id="scope" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="section-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#002b5c] mb-4">Research Goals</h2>
+                <div class="w-24 h-1 bg-[#ff6600] mx-auto mb-8"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-[#002b5c] text-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-route text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Optimizing Downlink Protocols</h3>
+                        <p class="text-gray-600">Developing efficient protocols for DtS-IoT communications</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-[#002b5c] text-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-brain text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">ML & Optimization</h3>
+                        <p class="text-gray-600">Leveraging machine learning for efficient scheduling</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-[#002b5c] text-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-globe-americas text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Global Applications</h3>
+                        <p class="text-gray-600">Enabling reliable communications worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#002b5c] text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="section-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+                <div class="w-24 h-1 bg-[#ff6600] mx-auto mb-8"></div>
+                <p class="max-w-2xl mx-auto text-lg">
+                    For inquiries, collaborations, or additional information, please contact the project coordinators:
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2">France</h3>
+                        <p class="mb-4">Oana Iova</p>
+                        <a href="mailto:oana.iova@inria.fr" class="text-[#ff6600] hover:underline">oana.iova@inria.fr</a>
+                    </div>
+                    <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2">Chile</h3>
+                        <p class="mb-4">Cesar Azurdia</p>
+                        <a href="mailto:cesarazurdia@uchile.cl" class="text-[#ff6600] hover:underline">cesarazurdia@uchile.cl</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">DORSAL-IoT</h3>
+                    <p class="text-gray-400">Supported by Inria, STIC-AmSud, and collaborating institutions.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 DORSAL-IoT Research Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
