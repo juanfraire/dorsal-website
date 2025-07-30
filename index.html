@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,36 +13,59 @@
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
+
         .hero-bg {
             background-image: linear-gradient(rgba(0, 43, 92, 0.8), rgba(0, 43, 92, 0.8)), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2110&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
+
         .fade-in {
             animation: fadeIn 1s ease-in-out;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .section-icon {
             font-size: 2.5rem;
             color: #ff6600;
             margin-bottom: 1rem;
         }
+
         .partner-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .partner-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
+        nav {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        nav.scrolled {
+            background-color: rgba(0, 43, 92, 0.95);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
+
 <body class="bg-white text-gray-800">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-[#002b5c] text-white shadow-lg z-50">
+    <nav class="fixed w-full bg-transparent text-white shadow-lg z-50">
         <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
                 <a href="#" class="text-xl font-bold">DORSAL-IoT</a>
@@ -68,11 +92,14 @@
     <section class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
         <div class="container mx-auto px-6 text-center fade-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">DORSAL-IoT</h1>
-            <h2 class="text-xl md:text-3xl font-semibold mb-8">Downlink Optimization for Robust Direct-to-Satellite IoT</h2>
+            <h2 class="text-xl md:text-3xl font-semibold mb-8">Downlink Optimization for Robust Direct-to-Satellite IoT
+            </h2>
             <p class="text-lg md:text-xl max-w-3xl mx-auto mb-12">
-                An international collaboration pioneering efficient downlink communication protocols for Direct-to-Satellite LoRaWAN IoT systems.
+                An international collaboration pioneering efficient downlink communication protocols for
+                Direct-to-Satellite LoRaWAN IoT systems.
             </p>
-            <a href="#about" class="bg-[#ff6600] hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+            <a href="#about"
+                class="bg-[#ff6600] hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
                 Learn More
             </a>
         </div>
@@ -90,7 +117,10 @@
             </div>
             <div class="max-w-4xl mx-auto text-center">
                 <p class="text-lg mb-8">
-                    DORSAL-IoT brings together experts from France, Chile, and Brazil to develop robust downlink protocols for LoRaWAN-based Direct-to-Satellite IoT communications. The project addresses key challenges in gateway selection, packet scheduling, and optimization for resource-constrained satellite networks.
+                    DORSAL-IoT brings together experts from France, Chile, and Brazil to develop robust downlink
+                    protocols for LoRaWAN-based Direct-to-Satellite IoT communications. The project addresses key
+                    challenges in gateway selection, packet scheduling, and optimization for resource-constrained
+                    satellite networks.
                 </p>
                 <div class="grid md:grid-cols-2 gap-8 mt-12">
                     <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-[#ff6600]">
@@ -121,31 +151,35 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="partner-card bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="logo-inria.svg" alt="Inria" class="w-16 h-16 mx-auto mb-4">
+                    <img src="logo-inria.svg" alt="Inria" class="max-w-16 max-h-16 object-contain mx-auto mb-4">
                     <h4 class="font-bold text-lg mb-4">Inria (France)</h4>
                     <div class="flex flex-col items-center gap-4">
                         <div class="flex flex-col items-center">
                             <img src="pic-oana.jpg" alt="Oana Iova" class="w-16 h-16 rounded-full grayscale mb-2">
-                            <p><a href="mailto:oana.iova@inria.fr" class="text-gray-800 hover:text-[#ff6600]">Oana Iova</a></p>
+                            <p><a href="mailto:oana.iova@inria.fr" class="text-gray-800 hover:text-[#ff6600]">Oana
+                                    Iova</a></p>
                         </div>
                         <div class="flex flex-col items-center">
                             <img src="pic-juan.jpeg" alt="Juan Fraire" class="w-16 h-16 rounded-full grayscale mb-2">
-                            <p><a href="mailto:juan.fraire@inria.fr" class="text-gray-800 hover:text-[#ff6600]">Juan Fraire</a></p>
+                            <p><a href="mailto:juan.fraire@inria.fr" class="text-gray-800 hover:text-[#ff6600]">Juan
+                                    Fraire</a></p>
                         </div>
                     </div>
                 </div>
 
                 <div class="partner-card bg-white p-6 rounded-lg shadow-md text-center">
-                    <img src="logo-uch.jpg" alt="UCH" class="max-w-16 max-h-16 mx-auto mb-4 object-contain">
+                    <img src="logo-uch.jpg" alt="UCH" class="max-w-16 max-h-16 object-contain mx-auto mb-4">
                     <h4 class="font-bold text-lg mb-4">Universidad de Chile (UCH)</h4>
                     <div class="flex flex-col items-center gap-4">
                         <div class="flex flex-col items-center">
                             <img src="pic-cesar.jpg" alt="Cesar Azurdia" class="w-16 h-16 rounded-full grayscale mb-2">
-                            <p><a href="mailto:cesarazurdia@uchile.cl" class="text-gray-800 hover:text-[#ff6600]">Cesar Azurdia</a></p>
+                            <p><a href="mailto:cesarazurdia@uchile.cl" class="text-gray-800 hover:text-[#ff6600]">Cesar
+                                    Azurdia</a></p>
                         </div>
                         <div class="flex flex-col items-center">
                             <img src="pic-marcos.jpeg" alt="Marcos Diaz" class="w-16 h-16 rounded-full grayscale mb-2">
-                            <p><a href="mailto:mdiazq@ing.uchile.cl" class="text-gray-800 hover:text-[#ff6600]">Marcos Diaz</a></p>
+                            <p><a href="mailto:mdiazq@ing.uchile.cl" class="text-gray-800 hover:text-[#ff6600]">Marcos
+                                    Diaz</a></p>
                         </div>
                     </div>
                 </div>
@@ -155,7 +189,8 @@
                     <h4 class="font-bold text-lg mb-4">Pontificia Universidad Católica de Chile (UC)</h4>
                     <div class="flex flex-col items-center">
                         <img src="pic-miguel.jpg" alt="Miguel Gutierrez" class="w-16 h-16 rounded-full grayscale mb-2">
-                        <p><a href="mailto:miguel.gutierrez@uc.cl" class="text-gray-800 hover:text-[#ff6600]">Miguel Gutierrez</a></p>
+                        <p><a href="mailto:miguel.gutierrez@uc.cl" class="text-gray-800 hover:text-[#ff6600]">Miguel
+                                Gutierrez</a></p>
                     </div>
                 </div>
 
@@ -164,7 +199,8 @@
                     <h4 class="font-bold text-lg mb-4">Universidad Diego Portales (UDP)</h4>
                     <div class="flex flex-col items-center">
                         <img src="pic-diego.jpg" alt="Diego Dujovne" class="w-16 h-16 rounded-full grayscale mb-2">
-                        <p><a href="mailto:diego.dujovne@mail.udp.cl" class="text-gray-800 hover:text-[#ff6600]">Diego Dujovne</a></p>
+                        <p><a href="mailto:diego.dujovne@mail.udp.cl" class="text-gray-800 hover:text-[#ff6600]">Diego
+                                Dujovne</a></p>
                     </div>
                 </div>
 
@@ -173,7 +209,8 @@
                     <h4 class="font-bold text-lg mb-4">Universidad Tecnológica Metropolitana (UTEM)</h4>
                     <div class="flex flex-col items-center">
                         <img src="pic-samuel.jpg" alt="Samuel Montejo" class="w-16 h-16 rounded-full grayscale mb-2">
-                        <p><a href="mailto:smontejo@utem.cl" class="text-gray-800 hover:text-[#ff6600]">Samuel Montejo Sánchez</a></p>
+                        <p><a href="mailto:smontejo@utem.cl" class="text-gray-800 hover:text-[#ff6600]">Samuel Montejo
+                                Sánchez</a></p>
                     </div>
                 </div>
 
@@ -181,8 +218,10 @@
                     <img src="logo-ufsc.svg" alt="UFSC" class="max-w-16 max-h-16 mx-auto mb-4 object-contain">
                     <h4 class="font-bold text-lg mb-4">Universidade Federal de Santa Catarina (UFSC)</h4>
                     <div class="flex flex-col items-center">
-                        <img src="pic-richard.jpg" alt="Richard Demo Souza" class="w-16 h-16 rounded-full grayscale mb-2">
-                        <p><a href="mailto:richard.demo@ufsc.br" class="text-gray-800 hover:text-[#ff6600]">Richard Demo Souza</a></p>
+                        <img src="pic-richard.jpg" alt="Richard Demo Souza"
+                            class="w-16 h-16 rounded-full grayscale mb-2">
+                        <p><a href="mailto:richard.demo@ufsc.br" class="text-gray-800 hover:text-[#ff6600]">Richard Demo
+                                Souza</a></p>
                     </div>
                 </div>
             </div>
@@ -202,32 +241,43 @@
 
             <!-- Challenge 1 -->
             <div class="max-w-5xl mx-auto mb-16 text-center">
-                <div class="bg-[#002b5c] text-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                <div
+                    class="bg-[#002b5c] text-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-satellite-dish text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2">Challenge 1: Downlink Gateway Selection</h3>
-                <p class="text-gray-600">Selecting the most suitable downlinking gateways to minimize redundant transmissions to devices with overlapping reception windows and coverage. This requires advanced decision-making in dynamic LEO satellite topologies.</p>
+                <p class="text-gray-600">Selecting the most suitable downlinking gateways to minimize redundant
+                    transmissions to devices with overlapping reception windows and coverage. This requires advanced
+                    decision-making in dynamic LEO satellite topologies.</p>
                 <div class="w-full overflow-x-auto my-8">
                     <img src="challenge-1.svg" alt="Downlink gateway selection challenge" class="w-full h-auto">
-                    <p class="text-center text-sm text-gray-600 mt-2">Figure 1. Downlink gateway selection challenge.</p>
+                    <p class="text-center text-sm text-gray-600 mt-2">Figure 1. Downlink gateway selection challenge.
+                    </p>
                 </div>
             </div>
 
             <!-- Challenge 2 -->
             <div class="max-w-5xl mx-auto mb-16 text-center">
-                <div class="bg-[#002b5c] text-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                <div
+                    class="bg-[#002b5c] text-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-random text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2">Challenge 2: Downlink Packet Scheduling</h3>
-                <p class="text-gray-600">Determining when and over which multi-hop ISL route to send each downlink packet so it arrives within the correct device reception window, accounting for space-terrestrial delays.</p>
+                <p class="text-gray-600">Determining when and over which multi-hop ISL route to send each downlink
+                    packet so it arrives within the correct device reception window, accounting for space-terrestrial
+                    delays.</p>
                 <div class="w-full overflow-x-auto my-8">
                     <img src="challenge-2.svg" alt="Downlink packet scheduling challenge" class="w-full h-auto">
-                    <p class="text-center text-sm text-gray-600 mt-2">Figure 2. Downlink packet scheduling challenge.</p>
+                    <p class="text-center text-sm text-gray-600 mt-2">Figure 2. Downlink packet scheduling challenge.
+                    </p>
                 </div>
             </div>
 
             <div class="max-w-4xl mx-auto mt-12 text-center">
-                <p class="text-gray-700">The objective of DORSAL-IoT is to address these two challenges using a combination of offline and online optimization techniques, including machine learning, to orchestrate downlink messages that prevent overlap, ensure optimal channel conditions, and enable seamless, reliable communication between remote IoT devices and the space core network.</p>
+                <p class="text-gray-700">The objective of DORSAL-IoT is to address these two challenges using a
+                    combination of offline and online optimization techniques, including machine learning, to
+                    orchestrate downlink messages that prevent overlap, ensure optimal channel conditions, and enable
+                    seamless, reliable communication between remote IoT devices and the space core network.</p>
             </div>
         </div>
     </section>
@@ -245,18 +295,20 @@
                     For inquiries, collaborations, or additional information, please contact the project coordinators:
                 </p>
             </div>
-            
+
             <div class="max-w-2xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
                         <h3 class="text-xl font-bold mb-2">France</h3>
                         <p class="mb-4">Oana Iova</p>
-                        <a href="mailto:oana.iova@inria.fr" class="text-[#ff6600] hover:underline">oana.iova@inria.fr</a>
+                        <a href="mailto:oana.iova@inria.fr"
+                            class="text-[#ff6600] hover:underline">oana.iova@inria.fr</a>
                     </div>
                     <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
                         <h3 class="text-xl font-bold mb-2">Chile</h3>
                         <p class="mb-4">Cesar Azurdia</p>
-                        <a href="mailto:cesarazurdia@uchile.cl" class="text-[#ff6600] hover:underline">cesarazurdia@uchile.cl</a>
+                        <a href="mailto:cesarazurdia@uchile.cl"
+                            class="text-[#ff6600] hover:underline">cesarazurdia@uchile.cl</a>
                     </div>
                 </div>
             </div>
@@ -269,7 +321,8 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
                     <h3 class="text-xl font-bold mb-2">DORSAL-IoT</h3>
-                    <p class="text-gray-400">Supported by Inria Associated Team, STIC-AmSud, and collaborating institutions.</p>
+                    <p class="text-gray-400">Supported by Inria Associated Team, STIC-AmSud, and collaborating
+                        institutions.</p>
                 </div>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition">
@@ -288,7 +341,7 @@
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -307,7 +360,7 @@
 
         // Scroll animation
         const fadeElements = document.querySelectorAll('.fade-in');
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -321,6 +374,17 @@
         fadeElements.forEach(element => {
             observer.observe(element);
         });
+
+        //
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
+
 </html>
