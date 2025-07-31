@@ -74,11 +74,17 @@
 </head>
 
 <body class="bg-white text-gray-800">
+
     <!-- Navigation -->
     <nav class="fixed w-full bg-transparent text-white shadow-lg z-50">
         <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-xl font-bold">DORSAL-IoT</a>
+                <a href="#hero" class="flex items-center space-x-2 text-xl font-bold">
+                    <img src="android-chrome-512x512.png" 
+                        alt="DORSAL-IoT Logo" 
+                        class="h-6 w-6 rounded-full object-cover">
+                    <span>DORSAL-IoT</span>
+                </a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#about" class="hover:text-orange-500 transition">About</a>
                     <a href="#partners" class="hover:text-orange-500 transition">Partners</a>
@@ -99,7 +105,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
         <div class="container mx-auto px-6 text-center fade-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">DORSAL-IoT</h1>
             <h2 class="text-xl md:text-3xl font-semibold mb-8">Downlink Optimization for Robust Direct-to-Satellite IoT
@@ -112,6 +118,18 @@
                 class="bg-[#ff6600] hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
                 Learn More
             </a>
+
+            <!-- Funding -->
+            <p class="mt-6 text-sm text-gray-200 opacity-80 max-w-lg mx-auto">
+                Funded by: 
+                <a href="https://www.inria.fr/fr/appel-projets-equipes-associees-partenariats-internationaux-2026" 
+                class="underline hover:text-white transition" target="_blank" rel="noopener noreferrer">
+                    INRIA EA</a>
+                and
+                <a href="https://www.sticmathamsud.org/sitio/" 
+                class="underline hover:text-white transition" target="_blank" rel="noopener noreferrer">
+                    STIC-AmSud</a>
+            </p>
         </div>
     </section>
 
@@ -342,21 +360,56 @@
             </div>
 
             <div class="max-w-2xl mx-auto">
+
                 <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- France -->
                     <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-2">France</h3>
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <img src="https://hatscripts.github.io/circle-flags/flags/fr.svg" alt="France flag" class="w-5 h-5 mr-2">
+                            France
+                        </h3>
                         <p class="mb-4">Oana Iova</p>
                         <a href="mailto:oana.iova@inria.fr"
                             class="text-[#ff6600] hover:underline">oana.iova@inria.fr</a>
                     </div>
+
+                    <!-- Chile (EA) -->
                     <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-2">Chile</h3>
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <img src="https://hatscripts.github.io/circle-flags/flags/cl.svg" alt="Chile flag" class="w-5 h-5 mr-2">
+                            Chile (EA)
+                        </h3>
                         <p class="mb-4">Cesar Azurdia</p>
                         <a href="mailto:cesarazurdia@uchile.cl"
                             class="text-[#ff6600] hover:underline">cesarazurdia@uchile.cl</a>
                     </div>
+
+                    <!-- Chile (STIC-AmSud) -->
+                    <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <img src="https://hatscripts.github.io/circle-flags/flags/cl.svg" alt="Chile flag" class="w-5 h-5 mr-2">
+                            Chile (STIC-AmSud)
+                        </h3>
+                        <p class="mb-4">Diego Dujovne</p>
+                        <a href="mailto:diego.dujovne@mail.udp.cl"
+                            class="text-[#ff6600] hover:underline">diego.dujovne@mail.udp.cl</a>
+                    </div>
+
+                    <!-- Brazil -->
+                    <div class="bg-white text-[#002b5c] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <img src="https://hatscripts.github.io/circle-flags/flags/br.svg" alt="Brazil flag" class="w-5 h-5 mr-2">
+                            Brazil
+                        </h3>
+                        <p class="mb-4">Richard Demo Souza</p>
+                        <a href="mailto:richard.demo@ufsc.br"
+                            class="text-[#ff6600] hover:underline">richard.demo@ufsc.br</a>
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -365,9 +418,25 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2">DORSAL-IoT</h3>
-                    <p class="text-gray-400">Supported by Inria Associated Team, STIC-AmSud, and collaborating
-                        institutions.</p>
+
+                    <!-- <h3 class="text-xl font-bold mb-2">DORSAL-IoT</h3> -->
+                    <a href="#hero" class="flex items-center space-x-2 text-xl font-bold mb-2">
+                        <img src="android-chrome-512x512.png" 
+                                alt="DORSAL-IoT Logo" 
+                                class="h-6 w-6 rounded-full object-cover">
+                        <span>DORSAL-IoT</span>
+                    </a>
+
+                    <p class="text-gray-400">
+                        Supported by 
+                        <a href="https://www.inria.fr/fr/appel-projets-equipes-associees-partenariats-internationaux-2026" 
+                        class="underline hover:text-white transition" target="_blank" rel="noopener noreferrer">
+                            INRIA Equipes Associées (EA)</a> 
+                        and 
+                        <a href="https://www.sticmathamsud.org/sitio/" 
+                        class="underline hover:text-white transition" target="_blank" rel="noopener noreferrer">
+                            STIC-AmSud</a> programs.
+                    </p>
                 </div>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition">
